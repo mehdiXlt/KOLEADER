@@ -1,38 +1,508 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* repeted style */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: var(--secound-color);
+}
+
+/* variable */
+
+:root {
+  /* color */
+  --first-color: #bebebe;
+  --secound-color: #161616;
+  --text-color: #333333;
+  --cube-color: #a6e6d4;
+  --button-color: #4b4b4b;
+  --hover-color: #f2c83d;
+
+  /* font size */
+  --big-font-size: 600;
+  --nrmal-font-size: 500;
+  --text-font-size: 300;
+
+  /* width */
+  --title-width: 4rem;
+  --subtitle-width: 2rem;
+}
+
+/* //// header //// */
+/* ================================== */
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secound-color);
+  position: relative;
+}
+
+.logo {
+  margin: 20px 40px;
+  width: 2.5em;
+}
+
+.home__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+}
+
+.menu__description {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  font-size: 0.7em;
+  color: var(--cube-color);
+}
+
+.line {
+  width: 2px;
+  height: 40px;
+  background-color: var(--cube-color);
+  margin-top: 24px;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  position: relative;
+}
+
+.home__title {
   text-align: center;
+  border-radius: 10px;
+}
+.bounce {
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bounce:hover {
+  color: var(--cube-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home__scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transition: 1s;
+  color: var(--cube-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home__scroll:hover {
+  transform: translateY(20px);
+  font-size: 0.6rem;
+  color: var(--cube-color);
+}
+
+.scroll__title {
+  color: var(--cube-color);
+  font-size: 0.7rem;
+  transition: 1s ease-in-out;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+/* choise */
+/* =================== */
+.choise {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.choise__container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.influencer__side {
+  width: 100%;
+  height: 50vh;
+  background-image: url(./components/assets/img/influe.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job__side {
+  width: 100%;
+  height: 50vh;
+  background-position: 50% 60%;
+  background-image: url(./components/assets/img/company.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choise__button {
+  color: white;
+  background-color: #a6e6d450;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.choise__button:hover {
+  background-color: var(--cube-color);
+  border-radius: 40px;
+}
+
+/* //// artists //// */
+/* =============================== */
+.artists {
+  margin-bottom: 4rem;
+}
+
+.artists__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artists__title {
+  margin-top: 40px;
+  color: var(--cube-color);
+}
+
+.artists__line {
+  background-color: var(--cube-color);
+  width: 50px;
+  height: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.artists__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.artists__card {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 90%;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.artists__card:hover {
+  box-shadow: 0px 0px 10px 1px rgba(107, 107, 107, 0.34);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card__title {
+  margin-left: 4px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+.left-text {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+.card__img {
+  width: 95%;
+}
+
+.zakaria {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+}
+
+.nihad {
+  margin-top: 4rem;
+}
+.Nihad {
+  color: #000;
+  font-weight: 600;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+/* influencer sub section */
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.sub__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.sub__title {
+  color: var(--cube-color);
+}
+
+.sub__line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--cube-color);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.sub__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.sub__inputs {
+  background-color: var(--first-color);
+  border: none;
+  margin: 20px 0 0 40px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.sub__description {
+  background-color: var(--first-color);
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.sub__button {
+  background-color: var(--first-color);
+  border: none;
+  margin-left: 40px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px;
+  color: var(--secound-color);
+}
+
+/* footer section */
+.footer {
+  background-color: #0cc792;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+  margin-top: 4rem;
+  height: 40vh;
+}
+
+.footer__logo {
+  height: 80px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+.social span {
+  margin-right: 10px;
+  background-color: var(--cube-color);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.social li {
+  margin-bottom: 20px;
+  background-color: var(--cube-color);
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.footer__right {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--secound-color);
+}
+.footer__right li {
+  background-color: var(--cube-color);
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+@media screen and (min-width: 600px) {
+  .home {
+    width: 100%;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home__logo {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+
+  .logo {
+    width: 9vw;
+  }
+
+  .home__menu {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+  }
+
+  .home__content {
+    position: absolute;
+    top: 30%;
+    left: 43%;
+  }
+
+  .home__title {
+    font-size: 2rem;
+  }
+  /* choise */
+
+  .choise__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .influencer__side,
+  .job__side {
+    height: 100vh;
+    margin-bottom: 4rem;
+  }
+  /* artist side */
+  .artists {
+    margin-top: 4em;
+  }
+
+  .artists__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: var(--first-color);
+  }
+
+  .card__img {
+    height: 100%;
+    width: 40%;
+    align-self: flex-end;
+  }
+
+  .card__imgLeft {
+    height: 100%;
+    width: 40%;
+    align-self: flex-start;
+  }
+
+  .card__title {
+    color: var(--secound-color);
+    writing-mode: horizontal-tb;
+  }
+
+  .card__titleLeft {
+    color: var(--secound-color);
+    writing-mode: horizontal-tb;
+  }
+
+  .sub__container {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+  .sub__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub__information {
+    width: 100%;
+    display: flex;
+    flex-direction: columns;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sub__inputs {
+    width: 50%;
+    height: 3em;
+    margin-bottom: 2em;
+  }
+
+  .sub__description {
+    width: 50%;
+    height: 10em;
+  }
+
+  .sub__button {
+    background-color: var(--cube-color);
+    width: 6em;
   }
 }
