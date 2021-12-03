@@ -1,7 +1,4 @@
 import '../../App.css'
-import MounirBouhi from '../assets/img/mounir_bouhi.png'
-import Zakaria from '../assets/img/zakaria_karaouet.png'
-import Nihad from '../assets/img/nihad_andelaziz.png'
 
 
 const Artists = ()=>{
@@ -16,25 +13,66 @@ const Artists = ()=>{
             </div>
             <div className='artists__content'>
                 {/* artists card */}
-
-                
                 {/* Mounir bouhi */}
-                <div className='artists__card'>
-                    <img className='card__img' alt='' src={MounirBouhi} />
-                    <span className='card__title left-text'> MOUNIR BOUHI</span>
+                <div className='artists__card mounir'>
+                    <span className='card__title '> MOUNIR BOUHI</span>
                 </div>
 
                 {/* Zakaria karaou */}
-                <div className='artists__card'>
-                    <img className='card__imgLeft' alt='' src={Zakaria} />
-                    <span className='card__titleLeft zakaria'> ZAKARIA  KARAOUET</span>
+                <div className='artists__card zakaria'>
+                    <span className='card__title '> ZAKARIA  KARAOUET</span>
                 </div>
                 
                 {/* lyna aridji */}
                 <div className='artists__card nihad'>
-                    <img className='card__img ' alt='' src={Nihad} />
-                    <span className='card__title Nihad'> NiHAD ANDELAZIZ</span>
+                    <span className='card__title '> NiHAD ANDELAZIZ</span>
                 </div>
+
+                {/* abdelwahab hamma */}
+                <div className='artists__card Abdelwahab'>
+                    <span className='card__title '> ABDELWAHAB HAMMA</span>
+                </div>
+
+                {/* abdnour bendjeddou*/}
+                <div className='artists__card abdnour'>
+                    <span className='card__title '> NiHAD ANDELAZIZ</span>
+                </div>
+
+                {/* karim semacha */}
+                <div className='artists__card karim'>
+                    <span className='card__title '> KARIM SEMCHA</span>
+                </div>
+
+                {/* lemkach red */}
+                <div className='artists__card lemkach'>
+                    <span className='card__title '> LEMKACH RED</span>
+                </div>
+
+                {/* lyna aridj */}
+                <div className='artists__card lyna'>
+                    <span className='card__title '> LYNA ARIDJ </span>
+                </div>
+
+                {/* maome moha oughlis */}
+                <div className='artists__card maome'>
+                    <span className='card__title '> MAOME MOHA OUGHLIS</span>
+                </div>
+
+                {/* mounir bouhi */}
+                <div className='artists__card yousra'>
+                    <span className='card__title '> YOUSRA AZEB</span>
+                </div>
+
+                {/* dastan gramm */}
+                <div className='artists__card daston'>
+                    <span className='card__title '> DASTAN GRAMM</span>
+                </div>
+
+                {/* yaramammo */}
+                <div className='artists__card yara'>
+                    <span className='card__title '> YARAMAMMO</span>
+                </div>
+
             </div>
         </section>
     )
